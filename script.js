@@ -157,6 +157,20 @@ function injectStyles() {
         .alert {
             margin-bottom: 0;
         }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-bottom: 10px;
+        }
+
+        .veta_logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
     `;
 
     const styleSheet = document.createElement('style');
@@ -176,6 +190,7 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/calling_2@main/call_2.gif" alt="Profile Picture" class="profile-picture">
         <h2>Call Emma</h2>
         <form onsubmit="event.preventDefault(); makeCall();">
             <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required>
