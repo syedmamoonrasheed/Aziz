@@ -159,10 +159,8 @@ function injectStyles() {
         }
 
         .profile-picture {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 2px solid #007bff;
+            width: 230px;
+            height: 230px;
             margin-bottom: 10px;
         }
 
@@ -191,8 +189,8 @@ function injectHTML() {
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
        
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/algonlp_calling@main/call_2.gif" alt="Profile Picture" class="profile-picture">
-        <h2>Call Emma</h2>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/algonlp_call@main/call_2.gif" alt="Profile Picture" class="profile-picture">
+        <h2>Sophia here!</h2>
         <form onsubmit="event.preventDefault(); makeCall();">
             <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required><br>
             <button type="submit">
@@ -226,7 +224,7 @@ function makeCall() {
     button.classList.add('animate-call');
     const phoneNumber = iti.getNumber();
     $.ajax({
-        url: 'https://suneel.pythonanywhere.com/make_call', // Adjust the URL to match your Flask server
+        url: 'http://3.82.61.35:83/make_call', // Adjust the URL to match your Flask server
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }),
