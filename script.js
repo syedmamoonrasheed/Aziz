@@ -39,7 +39,7 @@ function injectStyles() {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #28a745;
+            background-color: #007bff;
             color: white;
             border-radius: 50%;
             width: 60px;
@@ -54,7 +54,7 @@ function injectStyles() {
         }
 
         #call-icon:hover {
-            background-color: #218838;
+            background-color: #0056b3;
             transform: scale(1.1);
         }
 
@@ -65,12 +65,12 @@ function injectStyles() {
             right: 20px;
             width: 300px;
             padding: 20px;
-            background: #343a40;
+            background: white;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             z-index: 1000;
             animation: fadeIn 0.3s ease-in-out;
-            color: white;
+            color: #007bff;
             text-align: center;
         }
 
@@ -82,12 +82,12 @@ function injectStyles() {
         #call-popup h2 {
             margin-bottom: 20px;
             font-size: 20px;
-            color: white;
+            color: #007bff;
         }
 
         #call-popup p {
             margin-bottom: 20px;
-            color: white;
+            color: #007bff;
         }
 
         #call-popup form {
@@ -107,15 +107,15 @@ function injectStyles() {
         }
 
         #call-popup input:focus {
-            border-color: #28a745;
-            box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
 
         #call-popup button {
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
-            background-color: #28a745;
+            background-color: #007bff;
             color: white;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s, color 0.3s;
@@ -125,7 +125,7 @@ function injectStyles() {
         }
 
         #call-popup button:hover {
-            background-color: #218838;
+            background-color: #0056b3;
             transform: scale(1.05);
         }
 
@@ -159,10 +159,10 @@ function injectStyles() {
         }
 
         .profile-picture {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 2px solid white;
+            border: 2px solid #007bff;
             margin-bottom: 10px;
         }
 
@@ -190,10 +190,11 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/algo_calling1@main/call_2.gif" alt="Profile Picture" class="profile-picture">
+       
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/algonlp_calling@main/call_2.gif" alt="Profile Picture" class="profile-picture">
         <h2>Call Emma</h2>
         <form onsubmit="event.preventDefault(); makeCall();">
-            <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required><br>
             <button type="submit">
                 <i class="fas fa-phone"></i> Call
             </button>
