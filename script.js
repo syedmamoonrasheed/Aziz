@@ -189,7 +189,7 @@ function injectHTML() {
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
        
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/aziz_test_4@main/call4.gif" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/aziz_test_5@main/call4.gif" alt="Profile Picture" class="profile-picture">
         <h2>Jhon here!</h2>
         <form onsubmit="event.preventDefault(); makeCall();">
             <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required><br>
@@ -224,7 +224,7 @@ function makeCall() {
     button.classList.add('animate-call');
     const phoneNumber = iti.getNumber();
     $.ajax({
-        url: 'https://06d3-3-96-187-4.ngrok-free.app/make_call', // Adjust the URL to match your Flask server
+        url: 'https://fdfe-3-96-187-4.ngrok-free.app/make_call', // Adjust the URL to match your Flask server
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }),
