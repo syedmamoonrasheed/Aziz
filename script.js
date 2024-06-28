@@ -189,7 +189,7 @@ function injectHTML() {
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
        
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/aziz_test_11@main/call4.gif" alt="Profile Picture" class="profile-picture">
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/aziz_1@main/call4.gif" alt="Profile Picture" class="profile-picture">
         <h2>Jhon here!</h2>
         <form onsubmit="event.preventDefault(); makeCall();">
             <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required><br>
