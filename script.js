@@ -65,7 +65,7 @@ function injectStyles() {
             right: 20px;
             width: 300px;
             padding: 20px;
-            background: #fbfbfb    ;
+            background: #fbfbfb;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             z-index: 1000;
@@ -188,9 +188,8 @@ function injectHTML() {
     const callPopup = document.createElement('div');
     callPopup.id = 'call-popup';
     callPopup.innerHTML = `
-       
-        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/aziz_17@main/call4.gif" alt="Profile Picture" class="profile-picture">
-        <h2>Jhon here!</h2>
+        <img src="https://cdn.jsdelivr.net/gh/syedmamoonrasheed/aziz_18@main/call4.gif" alt="Profile Picture" class="profile-picture">
+        <h2>Sarah here!</h2>
         <form onsubmit="event.preventDefault(); makeCall();">
             <input type="tel" id="phone_number" name="phone_number" placeholder="Enter phone number" required><br>
             <button type="submit">
@@ -222,12 +221,14 @@ function showFlashMessage(message, status) {
 function makeCall() {
     const button = document.querySelector('#call-popup button');
     button.classList.add('animate-call');
-    const phoneNumber = iti.getNumber();
+    const phoneNumber = iti.getNumber(); // Fetch the phone number from input
+
+    // Send the phone number to the Flask server
     $.ajax({
-        url: 'https://a59c-99-79-122-127.ngrok-free.app/make_call', // Adjust the URL to match your Flask server
+        url: 'http://127.0.0.1:5004/make_call', // Flask server URL
         type: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ phone_number: phoneNumber }),
+        data: JSON.stringify({ phone_number: phoneNumber }), // Send phone number
         success: (response) => {
             button.classList.remove('animate-call');
             showFlashMessage(response.message, 'success');
