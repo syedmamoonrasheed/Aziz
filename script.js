@@ -225,7 +225,7 @@ function makeCall() {
 
     // Send the phone number to the Flask server
     $.ajax({
-        url: 'http://127.0.0.1:5004/make_call', // Flask server URL
+        url: 'http://99.79.122.127:83/make_call', // Flask server URL
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({ phone_number: phoneNumber }), // Send phone number
